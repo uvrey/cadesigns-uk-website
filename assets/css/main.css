@@ -1170,6 +1170,19 @@ section,
   transition: transform 10s ease, opacity 10s ease;
 }
 
+/* Mobile layout (3 rows) */
+@media (max-width: 768px) {
+  .portfolio-window {
+    flex-direction: column; /* Stack items in a column */
+    align-items: center; /* Center the items */
+  }
+
+  .portfolio-window .image-container {
+    width: 90%; /* Adjust width for mobile screens */
+    margin-bottom: 15px;
+  }
+}
+
 /* Show overlay text on hover */
 .image-container:hover .overlay-text {
   opacity: 1;
