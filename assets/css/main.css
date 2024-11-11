@@ -1092,6 +1092,7 @@ section,
     opacity: 1;
     padding: 0.1em;
     margin-top: 5.5em;
+    font-size: 0.9em;
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
 }
