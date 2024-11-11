@@ -74,6 +74,11 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -191,7 +196,8 @@ h6 {
 ------------------------------*/
 .scrolled .header {
   /* --background-color: rgba(82, 78, 68, 0.8); */
-  --background-color: rgba(199, 199, 191, 0.8)
+  /* --background-color: rgba(199, 199, 191, 0.8); */
+  opacity: 0;
 }
 
 /*--------------------------------------------------------------
@@ -438,44 +444,40 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
+  color: white;
+  background-color: rgb(95, 86, 86);
+  font-size: 0.8rem;
   text-align: center;
-  padding: 30px 0;
+  padding: 3em 20em;
   position: relative;
 }
 
-.footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
+.footer h2 {
+  z-index: 3;
+  opacity: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  transition: transform 1s ease;
+  font-weight: 350;
+  font-family: var(--nav-font);
+  letter-spacing: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  color: white;
 }
-
-.footer .detail-header {
-  color: var(--default-color);
-  letter-spacing: 1px;
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-  font-weight: 300;
-}
-
-.footer .detail-body {
-  color: var(--default-color);
-  letter-spacing: 0.5px;
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-  font-weight: 300;
-}
-
 
 .footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
+  font-size: 1.22em;
+  font-family: var(--nav-font);
+  font-weight: 250;
+  line-height: 1.5;
+}
+ 
+.footer p {
+  color: rgb(255, 255, 255);
 }
 
 .footer .social-links {
@@ -504,8 +506,11 @@ h6 {
 }
 
 .footer .copyright {
-  padding-top: 25px;
+  padding-top:1em;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  font-family: var(--nav-font);
+  letter-spacing: 4px;
+  font-size: 0.8em;
 }
 
 .footer .credits {
@@ -697,11 +702,11 @@ section,
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   opacity: 0;
   letter-spacing: 0.2em;
   font-family: var(--nav-font);
-  font-weight: 400;
+  font-weight: 350;
   transition: opacity 0.3s ease;
   text-align: center;
   z-index: 2;
@@ -790,15 +795,70 @@ section,
   height: 100vh;
   overflow: hidden;
   transition: transform 0.3s ease;
+  margin-top: 0.1em;
 }
 
 .about-window .about-body {
   flex: 1;
-  position: relative;
+  position: bottom;
   overflow: hidden;
+  z-index: 2;
+  margin-bottom: 0;
+  padding-top: 20em;
+  padding: 8em;
   margin-right: 0.1em;
-  background-color: var(--default-color)
 }
+
+.about-window .theme-1 {
+  background-color: rgb(95, 86, 86);
+  color: rgb(255, 255, 255);
+}
+
+.about-window .theme-2 {
+  background-color: var(--accent-color);
+  color: rgb(31, 31, 31);
+}
+
+.about-window .about-body h2 {
+  z-index: 3;
+  opacity: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  transition: transform 1s ease;
+  font-weight: 350;
+  font-family: var(--nav-font);
+  margin-top: 10em;
+  letter-spacing: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.about-window .about-body p {
+  font-size: 1.22em;
+  font-family: var(--nav-font);
+  font-weight: 250;
+  line-height: 1.5;
+}
+
+.about-window .theme-1 p {
+  color: rgb(255, 255, 255);
+}
+
+.about-window .theme-2 p {
+  color: rgb(52, 49, 49);
+}
+
+.about-window .theme-1 h2 {
+  color: white;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.about-window .theme-2 h2 {
+  color: rgb(255, 255, 255);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 60%);
+} 
 
 /** Image Container - for text over images with dynamic links */
 .about-window .image-container::before {
@@ -812,10 +872,6 @@ section,
   transition: background-color 0.7s ease;
   z-index: 1;
 }
-
-/* .about-window .image-container:hover::before {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
 
 .about-window .image-container {
   flex: 1;
@@ -834,7 +890,6 @@ section,
   object-fit: cover;
   transition: transform 10s ease, opacity 10s ease;
 }
-
 
 .about .profile-img img {
   margin-top: -60px;
@@ -870,9 +925,9 @@ section,
   font-size: 1.25rem;
 }
 
-.about .content p:last-child {
+/* .about .content p:last-child {
   margin-bottom: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1101,12 +1156,6 @@ section,
   transition: background-color 1s ease;
   z-index: 1;
   transition: transform 0.3s ease;
-}
-
-.collage-container .overlay-text {
-  background-color: #059652;
-  bottom: 0;
-  z-index: 3;
 }
 
 /* change opacity of darkening over image container */
@@ -1483,7 +1532,6 @@ section,
 .portfolio-details {
   width: 100%;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -3.8em;
@@ -1491,13 +1539,10 @@ section,
 
 .portfolio-details .portfolio-details-slider {
   width: 100vw;
-  /* Set the container to span the entire width of the viewport */
   height: 100vh;
-  /* Set the container to span the entire height of the viewport */
   position: relative;
-  /* Make sure the container is positioned correctly */
   overflow: hidden;
-  /* Hide any overflow to avoid scrolling */
+  margin-bottom: -3.8em;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -1515,8 +1560,7 @@ section,
   z-index: 3;
   opacity: 1;
   color: white;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  ;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
   padding: 10px 20px;
   border-radius: 8px;
   display: inline-block;
@@ -1525,8 +1569,8 @@ section,
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
-  position: relative;
   z-index: 2;
+  padding: 0.01em;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {

@@ -42,9 +42,8 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="./index.html">HOME</a></li>
                     <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="portfolio.html" class="active">PORTFOLIO</a></li>
+                    <li><a href="./index.html" class="active">PORTFOLIO</a></li>
                     <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -60,8 +59,7 @@
             <div class="image-container">
                 <a href="bespoke.html">
                     <img src="assets\img\portfolio\landlords\cadogengardens-hotel\bed-2.jpg" alt="Image 1">
-                    <p><span class="typed overlay-text" data-typed-items="CADOGEN GARDENS HOTEL" data-back-speed="0"
-                            data-loop="false"></span></p>
+                    <p><span class="typed overlay-text"></span></p>
                 </a>
             </div>
         </div>
@@ -100,16 +98,13 @@
         </div>
     </main>
 
-    <footer id="footer" class="footer light-background">
+    <footer id="footer" class="footer dark-background">
+        <h2>CADOGEN GARDENS HOTEL</h2>
+        <p>A bit more about the project goes here...</p>
         <div class="container">
-            <h3 class="detail-header">CADOGEN GARDENS HOTEL</h3>
-            <p class="detail-body">A bit more about the project goes here...</p>
-            <div class="container">
-                <div class="copyright">
-                    <span>Copyright</span> <strong class="px-1 sitename">Carol Anne Designs</strong> <span>All Rights Reserved</span>
-                </div>
-                <div class="credits">
-                </div>
+            <div class="copyright">
+                <span>Copyright</span> <strong class="px-1 sitename">Carol Anne Designs</strong> <span>All Rights
+                    Reserved</span>
             </div>
         </div>
     </footer>
@@ -127,7 +122,18 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
+    <!-- Typed heading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Typed('.typed', {
+                strings: ["CADOGEN GARDENS HOTEL"], // Text to type
+                typeSpeed: 80,                        // Speed of typing
+                backSpeed: 0,                         // No backspacing
+                loop: false,                          // Disable looping
+                showCursor: false                     // Hide the blinking cursor
+            });
+        });
+    </script>
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
