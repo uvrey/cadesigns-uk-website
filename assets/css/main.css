@@ -221,7 +221,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 2em;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: var(--nav-font);
     letter-spacing: 0.2em;
     font-weight: 400;
@@ -479,16 +479,18 @@ h6 {
   font-family: var(--nav-font);
   letter-spacing: 6px;
   margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.1em;
   background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
   color: white;
 }
 
 .footer p {
-  font-size: 1.22em;
+  font-size: 1em;
   font-family: var(--nav-font);
   font-weight: 250;
   line-height: 1.5;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .footer p {
@@ -717,7 +719,7 @@ section,
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   opacity: 0;
   letter-spacing: 0.2em;
   font-family: var(--nav-font);
@@ -808,9 +810,64 @@ section,
   flex-direction: row;
   width: 100vw;
   height: 100vh;
-  /* overflow: hidden; */
   transition: transform 0.3s ease;
   margin-top: 0.1em;
+}
+
+.about-window-story {
+  display: flex;
+  flex-direction: row;
+  padding: 10em 2em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: -0.1em;
+  font-family: var(--nav-font);
+  background-color: rgb(95, 86, 86);
+  color: rgb(255, 255, 255);
+  transition: transform 1s ease;
+  font-weight: 350;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about-window-story h2 {
+  z-index: 3;
+  opacity: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  transition: transform 1s ease;
+  font-weight: 350;
+  font-family: var(--nav-font);
+  letter-spacing: 6px;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 60%);
+}
+
+.about-window-story p {
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--nav-font);
+  font-weight: 250;
+  line-height: 1.5;
 }
 
 .about-window .about-body {
@@ -857,20 +914,34 @@ section,
   display: inline-block;
   text-align: center;
   transition: transform 1s ease;
-  font-weight: 350;
+  font-weight: 250;
   font-family: var(--default-font);
-  /* margin-top: 10em; */
-  letter-spacing: 2px;
-  /* margin-bottom: 1.5rem; */
-  font-size: 2rem;
+  margin-top: -4em;
+  letter-spacing: 4px;
+  font-size: 1.7rem;
 }
 
 .about-window .about-body p {
-  font-size: 1.22em;
+  font-size: 1.1rem;
   font-family: var(--nav-font);
   font-weight: 250;
   line-height: 1.5;
 }
+
+
+.about-window .about-body .central-h2 {
+  z-index: 3;
+  opacity: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 350;
+  font-family: var(--nav-font);
+  letter-spacing: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
 
 .about-window .theme-1 p {
   color: rgb(255, 255, 255);
@@ -892,22 +963,17 @@ section,
 
 .about-window .theme-1 h3 {
   color: white;
-  /* background-color: color-mix(in srgb, var(--accent-color), transparent 80%); */
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
 .about-window .theme-2 h3 {
-  color: rgb(255, 255, 255);
-  /* background-color: color-mix(in srgb, var(--heading-color), transparent 60%); */
-}
-
-.about-window .theme-1 h1 {
   color: white;
-  /* background-color: color-mix(in srgb, var(--accent-color), transparent 80%); */
+  background-color: color-mix(in srgb, var(--heading-color), transparent 50%);
 }
 
-.about-window .theme-2 h1 {
-  color: rgb(255, 255, 255);
-  /* background-color: color-mix(in srgb, var(--heading-color), transparent 60%); */
+.about-window h1 {
+  color: white;
+  margin-top: -4em;
 }
 
 
@@ -1175,7 +1241,7 @@ section,
     opacity: 1;
     padding: 0.1em;
     margin-top: 5.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
 
@@ -1183,7 +1249,7 @@ section,
     opacity: 1;
     padding: 0.1em;
     margin-top: 5.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
 }
@@ -1195,24 +1261,29 @@ section,
   align-items: center;
   justify-content: center;
   height: 80vh;
-  gap: 1.1em; /* Adjust the spacing between the quote and text */
+  gap: 1.1em;
+  /* Adjust the spacing between the quote and text */
 }
 
 .fancy-quote p {
   margin: 0;
-  font-size: 1rem; /* Adjust font size for paragraphs */
+  font-size: 1rem;
+  /* Adjust font size for paragraphs */
 }
 
 .fancy-quote h1 {
   /* margin: 0; */
-  font-size: 4rem; /* Adjust font size for paragraphs */
+  font-size: 4rem;
+  /* Adjust font size for paragraphs */
 }
 
 
 .fancy-quote .quote {
-  font-size: 50px; /* Make the quotation mark larger */
+  font-size: 50px;
+  /* Make the quotation mark larger */
   font-weight: bold;
-  color: #555; /* Adjust the color */
+  color: #555;
+  /* Adjust the color */
   line-height: 1;
 }
 
