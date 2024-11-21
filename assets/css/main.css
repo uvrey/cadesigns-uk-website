@@ -818,8 +818,9 @@ section,
   position: bottom;
   z-index: 2;
   margin-bottom: 0;
-  padding: 7em;
+  padding: 3em;
   margin-right: 0.1em;
+  height: 100vh;
 }
 
 .about-window .theme-1 {
@@ -837,15 +838,31 @@ section,
   opacity: 1;
   padding: 10px 20px;
   border-radius: 8px;
-  display: inline-block;
+  /* display: inline-block; */
   text-align: center;
   transition: transform 1s ease;
   font-weight: 350;
   font-family: var(--nav-font);
-  margin-top: 10em;
+  /* margin-top: 10em; */
   letter-spacing: 6px;
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
+}
+
+.about-window .about-body h3 {
+  z-index: 3;
+  opacity: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  transition: transform 1s ease;
+  font-weight: 350;
+  font-family: var(--default-font);
+  /* margin-top: 10em; */
+  letter-spacing: 2px;
+  /* margin-bottom: 1.5rem; */
+  font-size: 2rem;
 }
 
 .about-window .about-body p {
@@ -872,6 +889,27 @@ section,
   color: rgb(255, 255, 255);
   background-color: color-mix(in srgb, var(--heading-color), transparent 60%);
 }
+
+.about-window .theme-1 h3 {
+  color: white;
+  /* background-color: color-mix(in srgb, var(--accent-color), transparent 80%); */
+}
+
+.about-window .theme-2 h3 {
+  color: rgb(255, 255, 255);
+  /* background-color: color-mix(in srgb, var(--heading-color), transparent 60%); */
+}
+
+.about-window .theme-1 h1 {
+  color: white;
+  /* background-color: color-mix(in srgb, var(--accent-color), transparent 80%); */
+}
+
+.about-window .theme-2 h1 {
+  color: rgb(255, 255, 255);
+  /* background-color: color-mix(in srgb, var(--heading-color), transparent 60%); */
+}
+
 
 /* Mobile layout (3 rows) */
 @media (max-width: 768px) {
@@ -1075,6 +1113,51 @@ section,
   transition: transform 10s ease, opacity 10s ease;
 }
 
+.portfolio-window {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/** Image Container - for static collage images */
+.portfolio-window .v-collage-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 1s ease;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-window .v-collage-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+}
+
+.portfolio-window .v-collage-container:hover img {
+  transform: scale(1.03);
+}
+
+.portfolio-window .v-collage-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease, opacity 10s ease;
+}
+
+
 /* Mobile layout (3 rows) */
 @media (max-width: 768px) {
   .portfolio-window {
@@ -1104,6 +1187,35 @@ section,
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
 }
+
+/* Fancy quote */
+.fancy-quote {
+  display: flex;
+  display: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  gap: 1.1em; /* Adjust the spacing between the quote and text */
+}
+
+.fancy-quote p {
+  margin: 0;
+  font-size: 1rem; /* Adjust font size for paragraphs */
+}
+
+.fancy-quote h1 {
+  /* margin: 0; */
+  font-size: 4rem; /* Adjust font size for paragraphs */
+}
+
+
+.fancy-quote .quote {
+  font-size: 50px; /* Make the quotation mark larger */
+  font-weight: bold;
+  color: #555; /* Adjust the color */
+  line-height: 1;
+}
+
 
 /* Show overlay text on hover */
 .image-container:hover .overlay-text {
