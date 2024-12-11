@@ -824,7 +824,7 @@ section,
   text-align: center;
   transition: transform 0.3s ease;
   font-family: var(--nav-font);
-  background-color: rgb(95, 86, 86); 
+  background-color: rgb(95, 86, 86);
   color: rgb(255, 255, 255);
   margin-top: 0.1em;
   margin-bottom: 0.1em;
@@ -982,6 +982,8 @@ section,
 }
 
 
+
+
 /* Mobile layout (3 rows) */
 @media (max-width: 768px) {
   .about-window {
@@ -1020,6 +1022,40 @@ section,
     padding: 0.1em;
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
+
+
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 10;
+    /* Ensures it appears above the image */
+  }
+
+  .back-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker on hover */
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    /* Adjust based on your requirements */
+    height: auto;
+  }
+
 
   .about-window .about-body .top h2 {
     z-index: 3;
