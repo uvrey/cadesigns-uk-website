@@ -56,14 +56,12 @@
     </div>
   </header>
 
-  <main class="main">
+  <!-- <main class="main">
     <div class="about-window">
       <div class="image-container">
         <img src="assets/img/about/contact.jpg" alt="Image 2">
-        <!-- <span class="overlay-text">EXCELLENCE</span> -->
       </div>
       <div class="about-body theme-1">
-        <!-- <h2 class="theme-1"><span class="typed-h1"></span></h2> -->
         <p class="contact-page">
           <b>Email Enquiries</b>
           <br>
@@ -85,7 +83,62 @@
         </p>
       </div>
     </div>
+  </main> -->
+
+  <main class="main">
+
+    <div class="about-window">
+      <div class="image-container">
+        <img src="assets\img\about\contact.jpg" alt="Image 2">
+        <h2 class="theme-1 overlay-text"><span class="typed-contact"></span></h2>
+      </div>
+    </div>
+
+    <!-- <div class="about-window-story">
+      <div class="about-body theme-1">
+        <h2 class="theme-1 central-h2"><span class="typed-email"></span></h2>
+        <br>
+        <p class="central-text">
+          <a href="malito:info@CADesigns.uk">info@CADesigns.uk </a>
+        </p>
+        <br>
+        <h2 class="theme-1 central-h2"><span class="typed-phone"></span></h2>
+        <br>
+        <p><a href="tel:+442086000617">+44 20 8600 0617</a></p>
+        <br>
+        <h2 class="theme-1 central-h2"><span class="typed-post"></span></h2>
+        <p class="central-text"><a href="https://maps.app.goo.gl/NjeNcusPcrgpjxvg7">
+            39 Lower Richmond Road
+            Mortlake
+            SW14 7HH
+          </a></p>
+        <br><br>
+        </p>
+      </div>
+    </div> -->
     <footer id="footer" class="footer dark-background">
+      <div class="about-body theme-1">
+        <br>
+        <h2 class="theme-1 central-h2"><span class="typed-email"></span></h2>
+        <br>
+        <p class="central-text">
+          <a href="malito:info@CADesigns.uk">info@CADesigns.uk </a>
+        </p>
+        <br>
+        <h2 class="theme-1 central-h2"><span class="typed-phone"></span></h2>
+        <br>
+        <p><a href="tel:+442086000617">+44 20 8600 0617</a></p>
+        <br>
+        <h2 class="theme-1 central-h2"><span class="typed-post"></span></h2>
+        <p class="central-text"><a href="https://maps.app.goo.gl/NjeNcusPcrgpjxvg7">
+            39 Lower Richmond Road <br>
+            Mortlake <br>
+            London <br>
+            SW14 7HH
+          </a></p>
+        <br><br>
+        </p>
+      </div>
       <div class="container">
         <div class="copyright">
           <span>Copyright</span> <strong class="px-1 sitename">Carol Anne Designs</strong> <span>All Rights
@@ -110,7 +163,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      new Typed('.typed-h1', {
+      new Typed('.typed-contact', {
         strings: ["CONTACT US"], // Text to type
         typeSpeed: 80,                        // Speed of typing
         backSpeed: 30,                         // No backspacing
@@ -118,45 +171,29 @@
         showCursor: false,
         loopDelay: 5000
       });
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      new Typed('.typed-h2', {
-        strings: ["BESPOKE COMMISSIONS"], // Text to type
-        typeSpeed: 80,                        // Speed of typing
+      new Typed('.typed-email', {
+        strings: ["EMAIL ENQUIRIES"], // Text to type
+        typeSpeed: 30,                        // Speed of typing
         backSpeed: 30,                         // No backspacing
         loop: false,                          // Disable looping
         showCursor: false,
-        loopDelay: 3000
+        loopDelay: 5000
       });
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      new Typed('.typed-h3', {
-        strings: ["PROFESSIONAL LANDLORDS"], // Text to type
-        typeSpeed: 80,                        // Speed of typing
+      new Typed('.typed-phone', {
+        strings: ["TELEPHONE"], // Text to type
+        typeSpeed: 30,                        // Speed of typing
         backSpeed: 30,                         // No backspacing
         loop: false,                          // Disable looping
         showCursor: false,
-        loopDelay: 4000
+        loopDelay: 5000
       });
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      new Typed('.typed-h4', {
-        strings: ["END-TO-END DESIGN"], // Text to type
-        typeSpeed: 80,                        // Speed of typing
+      new Typed('.typed-post', {
+        strings: ["POSTAL ADDRESS"], // Text to type
+        typeSpeed: 30,                        // Speed of typing
         backSpeed: 30,                         // No backspacing
         loop: false,                          // Disable looping
         showCursor: false,
-        loopDelay: 4000
-      });
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      new Typed('.typed-h5', {
-        strings: ["FINISHES AND FURNISHING"], // Text to type
-        typeSpeed: 80,                        // Speed of typing
-        backSpeed: 30,                         // No backspacing
-        loop: false,                          // Disable looping
-        showCursor: false,
-        loopDelay: 4000
+        loopDelay: 5000
       });
     });
   </script>
