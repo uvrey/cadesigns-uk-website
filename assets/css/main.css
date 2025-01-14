@@ -1180,7 +1180,7 @@ section,
 @media only screen and (max-width: 1200px) {
   .portfolio-window {
     flex-direction: column;
-    overflow: visible;
+    overflow: hidden;
     /* Allow overflow to show content */
     flex-wrap: wrap;
     /* Adjust for flexible layout if needed */
@@ -1188,6 +1188,10 @@ section,
 
   .portfolio-window .image-container {
     overflow: visible;
+  }
+
+  .testimonial-img {
+    height: 100%;
   }
 }
 
@@ -1337,8 +1341,11 @@ section,
     align-items: center;
     height: 100%;
   }
-}
 
+  .testimonial-img {
+    display: none;
+  }
+}
 
 /* Fancy quote */
 .fancy-quote {
@@ -1357,21 +1364,15 @@ section,
 }
 
 .fancy-quote h1 {
-  /* margin: 0; */
   font-size: 4rem;
-  /* Adjust font size for paragraphs */
 }
-
 
 .fancy-quote .quote {
   font-size: 2rem;
-  /* Make the quotation mark larger */
   font-weight: bold;
   color: #555;
-  /* Adjust the color */
   line-height: 1;
 }
-
 
 /* Show overlay text on hover */
 .image-container:hover .overlay-text {
