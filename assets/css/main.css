@@ -1035,19 +1035,26 @@ section,
   }
 
   .about-window .image-container {
-    position: relative; /* Ensure positioning context for pseudo-elements */
-    width: 100vw;       /* Full width of the viewport */
-    height: 100vh;      /* Full height of the viewport */
-    overflow: hidden;   /* Hide excess image portions */
+    position: relative;
+    /* Ensure positioning context for pseudo-elements */
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
+    /* Hide excess image portions */
   }
-  
+
   .about-window .image-container img {
-    width: 100%;        /* Make the image span the entire width */
-    height: 100%;       /* Make the image span the entire height */
-    object-fit: cover;  /* Ensure the image covers the container while maintaining aspect ratio */
+    width: 100%;
+    /* Make the image span the entire width */
+    height: 100%;
+    /* Make the image span the entire height */
+    object-fit: cover;
+    /* Ensure the image covers the container while maintaining aspect ratio */
   }
-  
-  .image-container  {
+
+  .image-container {
     display: relative;
     overflow: hidden;
   }
@@ -1328,14 +1335,10 @@ section,
   .portfolio-window {
     flex-direction: column;
     align-items: center;
-    padding: 0;
-  }
-
-  .image-container .overlay-text {
-    opacity: 1;
-    font-size: 1.3rem;
+    height: 100%;
   }
 }
+
 
 /* Fancy quote */
 .fancy-quote {
