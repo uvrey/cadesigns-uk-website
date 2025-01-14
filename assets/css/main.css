@@ -453,8 +453,8 @@ h6 {
   .footer {
     flex-direction: column;
     align-items: center;
-    padding: 5em;
-    text-align: left;
+    padding: 20%;
+    text-align: center;
   }
 
   .footer .image-container {
@@ -815,6 +815,27 @@ section,
   margin-top: 0.1em;
 }
 
+@media only screen and (max-width: 1200px) {
+  .about-window {
+    flex-direction: column;
+  }
+
+  .about-window-story {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768) {
+  .about-window-story {
+    flex-direction: column;
+  }
+
+  .about-window-story p {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 .about-window-story {
   display: flex;
   flex-direction: row;
@@ -828,9 +849,6 @@ section,
   color: rgb(255, 255, 255);
   margin-top: 0.1em;
   margin-bottom: 0.1em;
-  /* background-color: var(--accent-color);
-  color: rgb(31, 31, 31); */
-  justify-content: center;
   transition: transform 1s ease;
   font-weight: 350;
 }
@@ -882,9 +900,16 @@ section,
   /* margin-bottom: 0; */
   padding: 3em;
   margin-right: 0.1em;
+  text-align: center;
 }
 
 .about-window .theme-1 {
+  background-color: rgb(95, 86, 86);
+  color: rgb(255, 255, 255);
+  justify-content: center;
+}
+
+.about-window .quote {
   background-color: rgb(95, 86, 86);
   color: rgb(255, 255, 255);
   justify-content: center;
@@ -981,9 +1006,6 @@ section,
   margin-top: -4em;
 }
 
-
-
-
 /* Mobile layout (3 rows) */
 @media (max-width: 768px) {
   .about-window {
@@ -1008,13 +1030,26 @@ section,
     justify-content: flex-end;
   }
 
-  .about-window .image-container {
-    width: 30%;
-    display: none;
+  .about-window .image-container::before {
+    display: flex;
   }
 
-  .about-window .image-container::before {
-    display: none;
+  .about-window .image-container {
+    position: relative; /* Ensure positioning context for pseudo-elements */
+    width: 100vw;       /* Full width of the viewport */
+    height: 100vh;      /* Full height of the viewport */
+    overflow: hidden;   /* Hide excess image portions */
+  }
+  
+  .about-window .image-container img {
+    width: 100%;        /* Make the image span the entire width */
+    height: 100%;       /* Make the image span the entire height */
+    object-fit: cover;  /* Ensure the image covers the container while maintaining aspect ratio */
+  }
+  
+  .image-container  {
+    display: relative;
+    overflow: hidden;
   }
 
   .image-container .overlay-text {
@@ -1022,7 +1057,6 @@ section,
     padding: 0.1em;
     background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
-
 
   .back-button {
     position: absolute;
@@ -1044,18 +1078,10 @@ section,
     /* Darker on hover */
   }
 
-  .image-container {
-    position: relative;
-    display: inline-block;
-  }
-
-  .image-container img {
-    display: block;
+  .about-window .image-container img {
+    display: flex;
     width: 100%;
-    /* Adjust based on your requirements */
-    height: auto;
   }
-
 
   .about-window .about-body .top h2 {
     z-index: 3;
@@ -1069,7 +1095,6 @@ section,
     font-family: var(--nav-font);
     letter-spacing: 6px;
     font-size: 1.2rem;
-    margin-top: 10em;
   }
 
   .about-window .about-body .bottom h2 {
@@ -1143,6 +1168,39 @@ section,
   height: 100vh;
   overflow: hidden;
   transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 1200px) {
+  .portfolio-window {
+    flex-direction: column;
+    overflow: visible;
+    /* Allow overflow to show content */
+    flex-wrap: wrap;
+    /* Adjust for flexible layout if needed */
+  }
+
+  .portfolio-window .image-container {
+    overflow: visible;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about-window .fancy-quote {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-window p {
+    margin-bottom: 1em;
+  }
+
+  .about-window .quote-mark {
+    display: none;
+  }
+
+  .about-window h2 {
+    text-align: center;
+  }
 }
 
 .portfolio-text {
@@ -1270,28 +1328,12 @@ section,
   .portfolio-window {
     flex-direction: column;
     align-items: center;
-  }
-
-  .portfolio-window .image-container {
-    width: 100%;
-    margin: 0.1em;
-    height: 100%;
+    padding: 0;
   }
 
   .image-container .overlay-text {
     opacity: 1;
-    padding: 0.1em;
-    margin-top: 5.5em;
     font-size: 1.3rem;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
-  }
-
-  .overlay-text {
-    opacity: 1;
-    padding: 0.1em;
-    margin-top: 5.5em;
-    font-size: 1.3rem;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   }
 }
 
@@ -1303,7 +1345,6 @@ section,
   justify-content: center;
   height: 80vh;
   gap: 1.1em;
-  /* Adjust the spacing between the quote and text */
 }
 
 .fancy-quote p {
@@ -1320,7 +1361,7 @@ section,
 
 
 .fancy-quote .quote {
-  font-size: 50px;
+  font-size: 2rem;
   /* Make the quotation mark larger */
   font-weight: bold;
   color: #555;
