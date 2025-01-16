@@ -815,13 +815,12 @@ section,
     margin-top: 0.1em;
 }
 
-.banner-window {
+.about-window .banner-window {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 100vh;
     transition: transform 0.3s ease;
-    margin-top: 0.1em;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -838,7 +837,6 @@ section,
     .about-window-story p {
         padding-left: 10%;
         padding-right: 10%;
-        margin: 2rem;
     }
 }
 
@@ -853,9 +851,9 @@ section,
     font-family: var(--nav-font);
     background-color: rgb(95, 86, 86);
     color: rgb(255, 255, 255);
-    margin-bottom: 0.1em;
     transition: transform 1s ease;
     font-weight: 350;
+    margin-top: 0.1em;
 }
 
 @keyframes gradientAnimation {
@@ -902,7 +900,6 @@ section,
     flex: 2;
     position: bottom;
     z-index: 2;
-    /* margin-bottom: 0; */
     padding: 3em;
     margin-right: 0.1em;
     text-align: center;
@@ -1052,7 +1049,7 @@ section,
         display: flex;
     }
 
-    .banner-window .image-container {
+    .about-window .banner-window .image-container {
         width: 100%;
         height: 100vh;
     }
@@ -1071,13 +1068,22 @@ section,
 
 /** WORKING **/
 @media (max-width: 768px) {
+
+    .about-window .image-container::before {
+        display: flex;
+    }
+
     .banner-window .image-container::before {
         display: flex;
     }
 
     .about-window {
+        height: 130vh;
+    }
+
+    .banner-window{
         display: inline-flex;
-        height: 140vh;
+        height: 100vh;
     }
 
     .about-window .fancy-quote h3 {
@@ -1094,7 +1100,6 @@ section,
         font-size: 1rem;
     }
 
-
     .about-window .fancy-quote .quote {
         padding-top: 0;
     }
@@ -1110,14 +1115,7 @@ section,
         overflow: hidden;
     }
     
-    .banner-window .image-container {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .banner-window .image-container img {
+    .about-window .image-container img {
         width: 100%;
         /* Make the image span the entire width */
         height: 100%;
@@ -1126,8 +1124,14 @@ section,
         /* Ensure the image covers the container while maintaining aspect ratio */
     }
 
-
-    .about-window .image-container img {
+    .banner-window .image-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .banner-window .image-container img {
         width: 100%;
         /* Make the image span the entire width */
         height: 100%;
@@ -1168,6 +1172,11 @@ section,
     }
 
     .about-window .image-container img {
+        display: flex;
+        width: 100%;
+    }
+
+    .banner-window .image-container img {
         display: flex;
         width: 100%;
     }
@@ -1233,6 +1242,37 @@ section,
     object-fit: cover;
     transition: transform 10s ease, opacity 10s ease;
 }
+
+.banner-window .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.7s ease;
+    z-index: 1;
+}
+
+.banner-window .image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    margin-right: 0.1em;
+}
+
+.banner-window .image-container:hover img {
+    transform: scale(1.03);
+}
+
+.banner-window .image-container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 10s ease, opacity 10s ease;
+}
+
 
 /*--------------------------------------------------------------
   # Portfolio Windows for Displaying Photo Galleries
@@ -1467,17 +1507,6 @@ section,
 .quote-block p {
     margin: 0;
     font-size: 1em;
-}
-
-.fancy-quote h1 {
-    font-size: 4rem;
-}
-
-.fancy-quote .quote {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #555;
-    line-height: 1;
 }
 
 /* Show overlay text on hover */
