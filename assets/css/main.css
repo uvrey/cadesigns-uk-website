@@ -1210,7 +1210,7 @@ section,
     transition: transform 0.3s ease;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .portfolio-window {
         flex-direction: column;
         overflow: hidden;
@@ -1220,6 +1220,10 @@ section,
     .portfolio-window .image-container {
         overflow: visible;
     }
+
+    /* .overlay-text {
+        opacity: 1;
+    } */
 
     .testimonial-img {
         height: 100%;
@@ -1362,11 +1366,15 @@ section,
 
 
 /* Mobile layout (3 rows) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .portfolio-window {
         flex-direction: column;
         align-items: center;
         height: 100%;
+    }
+
+    .overlay-text {
+        opacity: 1;
     }
 }
 
