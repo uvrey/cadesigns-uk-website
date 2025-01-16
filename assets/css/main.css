@@ -1372,11 +1372,20 @@ section,
         align-items: center;
         height: 100%;
     }
+}
 
+@media (min-width: 744px) and (max-width: 1366px) and (orientation: portrait) {
     .overlay-text {
         opacity: 1;
     }
 }
+
+@media (min-width: 744px) and (max-width: 1366px) and (orientation: landscape) {
+    .overlay-text {
+        opacity: 1;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .about-window .quote-block {
