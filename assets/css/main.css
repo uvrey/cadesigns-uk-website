@@ -955,6 +955,15 @@ section,
     line-height: 1.5;
 }
 
+.about-window .theme-2 b {
+    color:rgb(99, 96, 96);
+    letter-spacing: 6px;
+}
+
+.about-window .theme-1 b {
+    color:rgb(209, 203, 203);
+    letter-spacing: 6px;
+}
 
 .about-window .about-body .central-h2 {
     z-index: 3;
