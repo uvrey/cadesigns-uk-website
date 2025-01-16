@@ -891,7 +891,7 @@ section,
 }
 
 .about-window .about-body {
-    flex: 1;
+    flex: 2;
     position: bottom;
     z-index: 2;
     /* margin-bottom: 0; */
@@ -1005,6 +1005,15 @@ section,
 
 /* Mobile layout (3 rows) */
 
+.about-window .testimonial-block {
+    height: 100vh;
+}
+
+.shrunk-window-img {
+    display: none;
+  
+}
+
 @media (max-width: 933px) {
     .about-window {
         bottom: 0;
@@ -1013,6 +1022,22 @@ section,
         flex-direction: column;
         align-items: center;
         text-align: left;
+    }
+
+    .about-window .testimonial-block {
+        height: 200vh;
+        display: flex;
+    }
+
+    .about-window .image-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .testimonial-img {
+        margin-top: 0.1em;
+        height: 200vh;
+        display: none;
     }
 }
 
@@ -1337,6 +1362,7 @@ section,
 .fancy-quote {
     display: flex;
     display: row;
+    position: relative;
     align-items: center;
     justify-content: center;
     margin: 0em;
