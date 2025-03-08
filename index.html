@@ -42,7 +42,7 @@
 </head>
 
 <body class="portfolio-details-page" data-aos="fade" data-aos-delay="450" data-aos-duration="1000"
-  data-aos-easing="ease-out-cubic" data-aos-offset="100" data-aos-anchor-placement="center">
+  data-aos-easing="ease-out-cubic" data-aos-offset="200" data-aos-anchor-placement="center">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -65,24 +65,26 @@
 
   <main class="main">
 
-    <div class="portfolio-window">
-      <div class="image-container">
-        <a href="bespoke.html">
-          <img src="assets/img/showcase-5.webp" alt="Image 2">
-          <span class="overlay-text">BESPOKE COMMISSIONS</span>
-        </a>
-      </div>
-      <div class="image-container">
-        <a href="rentals.html">
-          <img src="assets/img/showcase-8.webp" alt="Image 2">
-          <span class="overlay-text">RENTAL INVESTMENTS</span>
-        </a>
-      </div>
-      <div class="image-container">
-        <a href="design-services.html">
-          <img src="assets/img/showcase-4.webp" alt="Image 1">
-          <span class="overlay-text">DESIGN SERVICES</span>
-        </a>
+    <div data-aos="fade" data-aos-delay="100" data-aos-duration="1300" data-aos-easing="ease-in-out">
+      <div class="portfolio-window">
+        <div class="image-container">
+          <a href="bespoke.html">
+            <img src="assets/img/showcase-5.webp" alt="Image 2">
+            <span class="overlay-text">BESPOKE COMMISSIONS</span>
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="rentals.html">
+            <img src="assets/img/showcase-8.webp" alt="Image 2">
+            <span class="overlay-text">RENTAL INVESTMENTS</span>
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="design-services.html">
+            <img src="assets/img/showcase-4.webp" alt="Image 1">
+            <span class="overlay-text">DESIGN SERVICES</span>
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -96,7 +98,7 @@
       </div>
     </div>
   </footer>
-  
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -118,6 +120,11 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.add('loaded');
+    });
+  </script>
 
 </body>
 

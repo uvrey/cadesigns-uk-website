@@ -71,6 +71,12 @@ body {
     color: var(--default-color);
     background-color: var(--background-color);
     font-family: var(--default-font);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 a {
