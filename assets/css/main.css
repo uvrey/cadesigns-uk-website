@@ -445,7 +445,7 @@ h6 {
     background-color: rgb(95, 86, 86);
     font-size: 0.8rem;
     text-align: center;
-    padding: 3em 20em;
+    padding: 1% 20em;
     position: relative;
     margin-top: 0.1em;
 }
@@ -1298,15 +1298,17 @@ section,
         flex-direction: column;
         overflow: hidden;
         flex-wrap: wrap;
+        height: 160vh;
     }
 
     .portfolio-window .image-container {
         overflow: visible;
     }
 
-    /* .overlay-text {
+    .overlay-text {
         opacity: 1;
-    } */
+        font-size: 0.9rem;
+    }
 
     .testimonial-img {
         display: none;
@@ -1347,9 +1349,9 @@ section,
     z-index: 1;
 }
 
-.portfolio-window .image-container:hover::before {
+/* .portfolio-window .image-container:hover::before {
     background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 .portfolio-window .image-container {
     flex: 1;
