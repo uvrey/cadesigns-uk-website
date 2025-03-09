@@ -72,11 +72,7 @@ body {
     background-color: var(--background-color);
     font-family: var(--default-font);
     opacity: 0;
-    transition: opacity 2s ease-in-out;
-}
-
-body.loaded {
-    opacity: 1;
+    transition: opacity 4s;
 }
 
 a {
@@ -835,21 +831,10 @@ section,
     }
 }
 
-@media only screen and (max-width: 768) {
-    .about-window-story {
-        flex-direction: column;
-    }
-
-    .about-window-story p {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-}
-
 .about-window-story {
     display: flex;
     flex-direction: row;
-    padding: 10em 2em;
+    padding: 2em 2em;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -859,8 +844,20 @@ section,
     color: rgb(255, 255, 255);
     transition: transform 1s ease;
     font-weight: 350;
-    margin-top: 0.1em;
+    margin-bottom: 0.1em;
 }
+
+
+@media only screen and (max-width: 768) {
+    .about-window .about-window-story {
+        flex-direction: column;
+        padding: 0em;
+    }
+    .about-window-story {
+        flex-direction: column;
+    }
+}
+
 
 @keyframes gradientAnimation {
     0% {
@@ -966,24 +963,28 @@ section,
 }
 
 .two-column-list ul {
-    list-style-type:none; /* Bullet points */
-    columns: 2; /* Create two columns */
-    column-gap: 2em; /* Space between columns */
+    list-style-type: none;
+    /* Bullet points */
+    columns: 2;
+    /* Create two columns */
+    column-gap: 2em;
+    /* Space between columns */
     padding: 0;
     margin: 0;
-  }
-  
-  .two-column-list li {
-    margin: 0.5em 0; /* Add spacing between list items */
-  }
+}
+
+.two-column-list li {
+    margin: 0.5em 0;
+    /* Add spacing between list items */
+}
 
 .about-window .theme-2 b {
-    color:rgb(99, 96, 96);
+    color: rgb(99, 96, 96);
     letter-spacing: 6px;
 }
 
 .about-window .theme-1 b {
-    color:rgb(209, 203, 203);
+    color: rgb(209, 203, 203);
     letter-spacing: 6px;
 }
 
@@ -1062,6 +1063,7 @@ section,
 }
 
 @media (max-width: 1024px) {
+
     /* Makes overlay visible for tablets / mobile */
     .image-container .overlay-text {
         opacity: 1;
@@ -1087,7 +1089,7 @@ section,
         height: 130vh;
     }
 
-    .banner-window{
+    .banner-window {
         display: inline-flex;
         height: 100vh;
     }
@@ -1120,7 +1122,7 @@ section,
         height: 100vh;
         overflow: hidden;
     }
-    
+
     .about-window .image-container img {
         width: 100%;
         /* Make the image span the entire width */
@@ -1136,7 +1138,7 @@ section,
         height: 100vh;
         overflow: hidden;
     }
-    
+
     .banner-window .image-container img {
         width: 100%;
         /* Make the image span the entire width */
@@ -1305,6 +1307,7 @@ section,
         overflow: hidden;
         flex-wrap: wrap;
         height: 160vh;
+        margin-bottom: -1em;
     }
 
     .portfolio-window .image-container {
@@ -1320,6 +1323,8 @@ section,
         display: none;
     }
 }
+
+
 
 @media only screen and (max-width: 700px) {
 
@@ -1463,11 +1468,12 @@ section,
         align-items: center;
         height: 100%;
         object-fit: cover;
+        margin-bottom: -1em;
     }
 }
 
 @media (min-width: 744px) and (max-width: 1366px) and (orientation: portrait) {
-     .overlay-text {
+    .overlay-text {
         opacity: 1;
     }
 }
@@ -1486,6 +1492,10 @@ section,
 
     .about-window .fancy-quote {
         margin: 0;
+    }
+
+    .about-window {
+        margin-bottom: -1em;
     }
 }
 
